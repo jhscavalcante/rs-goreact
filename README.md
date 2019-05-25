@@ -1,1 +1,1 @@
-GoReact
+GoReact - Ambiente e Conceitos
