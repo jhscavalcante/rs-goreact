@@ -1,22 +1,9 @@
 import React, { Component, Fragment } from "react";
-import PropTypes from "prop-types";
 import { render } from "react-dom";
 
-class Button extends Component {
-  static defaultProps = {
-    children: "Salvar"
-  };
+import Button from "./Button";
 
-  static propTypes = {
-    onClick: PropTypes.func.isRequired,
-    children: PropTypes.string
-  };
-
-  render() {
-    return <button onClick={this.props.onClick}>{this.props.children}</button>;
-  }
-}
-
+// componente em forma de Classe (statefull component)
 class App extends Component {
   state = {
     counter: 0
@@ -24,9 +11,7 @@ class App extends Component {
 
   handleClick = () => {
     // estamos sobrepondo a variável no estado, pois, não é permitido alterar o valor dela
-    // modelo 2 => utilizando o state da fila de processamento
-    this.setState(state => ({ counter: state.counter + 1 }));
-    this.setState(state => ({ counter: state.counter + 1 }));
+    this.setState({ counter: this.state.counter + 1 });
   };
 
   render() {
