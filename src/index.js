@@ -24,9 +24,9 @@ class App extends Component {
 
   handleClick = () => {
     // estamos sobrepondo a variável no estado, pois, não é permitido alterar o valor dela
-    this.setState({ counter: this.state.counter + 1 }, () => {
-      console.log(this.state.counter);
-    });
+    // modelo 2 => utilizando o state da fila de processamento
+    this.setState(state => ({ counter: state.counter + 1 }));
+    this.setState(state => ({ counter: state.counter + 1 }));
   };
 
   render() {
