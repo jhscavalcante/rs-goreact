@@ -24,11 +24,13 @@ class App extends Component {
 
   handleClick = () => {
     // estamos sobrepondo a variável no estado, pois, não é permitido alterar o valor dela
-    this.setState({ counter: this.state.counter + 1 });
+    this.setState({ counter: this.state.counter + 1 }, () => {
+      console.log(this.state.counter);
+    });
   };
 
   render() {
-    console.log("render");
+    //console.log("render");
 
     return (
       <Fragment>
