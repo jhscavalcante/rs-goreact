@@ -3,7 +3,7 @@ import { render } from "react-dom";
 
 import Button from "./Button";
 
-import "./style.css";
+import "./style.scss";
 
 // componente em forma de Classe (statefull component)
 class App extends Component {
@@ -40,8 +40,8 @@ class App extends Component {
     //console.log("render");
     return (
       <Fragment>
-        <h1>Hello World!</h1>
-        <h2>{this.state.counter}</h2>
+        <h1 className="title">Hello World!</h1>
+        <h2 style={{ color: "#FFE933" }}>{this.state.counter}</h2>
         <Button onClick={this.handleClick}> Somar </Button>
       </Fragment>
     );
